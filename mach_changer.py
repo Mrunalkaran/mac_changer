@@ -19,4 +19,5 @@ changer(options.interface,options.new_mac)
 
 ifconfig_result= subprocess.check_output(["ifconfig",options.interface])
 verify = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w",ifconfig_result)
+
 print ("new mac :" + verify.group(0))
